@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- style CSS-->
+    <link rel="stylesheet" href="/public/css/style.css">
+
+    <title>챠챠 포트 폴리오</title>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">CHa`{CHa}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content2">EVENT</a>
+                    </li>
+                
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content3">RECIPE</a>
+                    </li>
+                
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content4">오시는길</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- nav -->
+
+
+    <!-- 섹션1 -->
+    <section id="content1">
+        <div class="backg_Jamong">
+            <div class="cont1_wrap">
+                <h1>세계를 잇는 <span>자몽,</span><br>
+                    미래를 여는 <span>자몽</span>
+                </h1>
+                <p class="my-4">국민 과일 제주감귤이 여러분을 초대합니다</p>
+                <b>2021.11.5[금] ~ 11.14[일]</b>
+                <a href="#content4" class="mt-4 btn btn-outline-light">오시는길</a>
+            </div>
+        </div>
+    </section>
+    <!-- //섹션1 -->
+
+    <!-- 섹션2 -->
+    <section id="content2">
+        <div class="cont2_wrap container ">
+            <h2 class="my-5">EVENT</h2>
+            <div class="card-wrap row justify-content-between"></div>
+        </div>
+    </section>
+    <!-- //섹션2 -->
+
+    <!-- 섹션3 -->
+    <section id="content3">
+        <div class="cont3_wrap container ">
+            <h2 class="my-5">🍊자몽레시피🍊</h2>
+
+            <div class="video-wrap">
+                <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/teqmCcrErEQ?controls=0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- //섹션3 -->
+
+    <!-- //섹션4-->
+    <section id="content4">
+        <div class="cont4_wrap container ">
+            <h2 class="my-5">🚖오시는길🚍</h2>
+            <div id="map" style="width:100%;height:400px;"></div>
+        </div>
+    </section>
+    <!-- //섹션4 -->
+
+    <!-- 푸터 -->
+    <footer>
+        <h3>ChaCha 자몽축제</h3>
+        <address>경기도 안산시 챠챠의 자몽파티장</address>
+        <p>Tel 031-1234-1234</p>
+    </footer>
+    <!-- //푸터 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <script>
+        //Javascript
+        //최초 로드 시 iframe 높이값 비율에 맞게 세팅
+        var $videoIframe = document.getElementById('video');
+        var responsiveHeight = $videoIframe.offsetWidth * 0.5625;
+        $videoIframe.setAttribute('height', responsiveHeight);
+
+        //브라우저 리사이즈 시 iframe 높이값 비율에 맞게 세팅
+        window.addEventListener('resize', function () {
+            responsiveHeight = $videoIframe.offsetWidth * 0.5625;
+            $videoIframe.setAttribute('height', responsiveHeight);
+        });
+    </script>
+    <script src="/public/js/context.js"></script>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9bc7ff44847d39f23c0deb4ba7b38f14"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+    </script>
+
+
+
+</body>
+
+</html>

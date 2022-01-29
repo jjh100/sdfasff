@@ -1,0 +1,88 @@
+@charset 'utf-8';
+
+/*페이지*/
+
+//레이아웃
+#content1{width: 100%;height:100vh;}
+
+
+.backg_Jamong{
+    font-family: $곶감;
+    width: 100%;height: 100%;
+    background: url(/public/img/jamong.png)no-repeat center center;
+    background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+    
+    .cont1_wrap{
+        color: #fff;text-align: center;
+        h1{font-size: 6em;line-height: 1.5em;
+            span{color: rgb(174, 33, 33);font-size: 1.2em;
+                animation: ringMong 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes ringMong {
+                from{color: #fff;}
+                to{color: rgb(174, 33, 33)}
+            }
+        }
+        p{font-size: 3em;}
+        b{font-size: 2em; font-weight: bold;display: block;}
+        a{padding: 1em 10em;}
+    }
+}
+
+#content2{padding: 10em; font-family: $완도;
+    .cont2_wrap{
+        h2{font-size: 7em; text-align: center;}
+        .card-wrap{
+           
+            .card-title{font-size: 3em; font-weight: bold;}
+            .card-text{font-family: $월컴;}
+            .btn{font-family: $월컴;margin-top: 1px;}
+        }
+    }
+}
+
+#content3{padding: 10em; font-family: $완도;
+    .cont3_wrap{
+        h2{font-size: 7em; text-align: center;}
+        .video-wrap {position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden;}
+.video-wrap iframe,
+.video-wrap object,
+.video-wrap embed {position:absolute; top:0; left:0; width:100%; height:100%;}
+    }
+}
+
+#content4{padding: 10em; font-family: $완도;
+    .cont4_wrap{
+        h2{font-size: 7em; text-align: center;}
+        #map{border: 1px solid #000;}
+    }
+}
+
+footer{font-family: $웰컴;
+    background:#333333;color: #949494;font-size: 1.5em;padding: 2em 10em ;line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+/* PC (해상도 1024px)*/
+@media all and (min-width:1024px) { 
+body{font-size: 10px;}
+} 
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+    body{font-size: 8px;}
+    } 
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+    body{font-size: 5px;}
+}
